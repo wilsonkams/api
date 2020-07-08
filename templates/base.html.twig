@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Historisation d'un utilisateur{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-default" style="color:white;">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li style="color:blue;"><a href="{{ path('add')}}">AJOUTER UN UTILISATEUR</a></li>
+      <li style="color:blue;"><a href="{{ path('index')}}">AFFICHER TOUS LES UTILISATEURS</a></li>
+    </ul>
+  </div>
+</nav>
+        {% block content %}{% endblock %}
+        {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<script type="text/javascript">
+		    $('select').formSelect();
+		</script>
+        {% endblock %}
+    </body>
+</html>
+

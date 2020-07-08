@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Utilisateurs| Modifier l'utilisateur{% endblock %}
+    
+
+{% block content %}
+    <div class="container center">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h4>Modifier l'utilisateur {{user.lastname}}</h4>
+            </div>
+            <div class="col s12 m12 l12">
+                {{ form_start(form, {'attr': {'class': 'row'}}) }}
+            <div class="input-field col s12 m6 l6 offset-m3 offset-l3">
+                {{ form_widget(form.firstname, {'attr': {'placeholder': 'Prénom'}}) }}
+                <span class="error">{{ form_errors(form.firstname) }}</span>
+            </div>
+            <div class="input-field col s12 m6 l6 offset-m3 offset-l3">
+                {{ form_widget(form.lastname, {'attr': {'placeholder': 'Nom'}}) }}
+                <span class="error">{{ form_errors(form.lastname) }}</span>
+            </div>
+            <div class="input-field col s12">
+                <input type="submit" name="" class="btn btn-primary" value="Modifier">
+            </div>
+            {{ form_end(form) }}
+            </div
+        </div>
+    </div>
+{% endblock %}
